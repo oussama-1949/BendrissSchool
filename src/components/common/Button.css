@@ -1,0 +1,30 @@
+/* styles.css */
+.custom-button {
+  display: block;
+  border-radius: 1rem; /* rounded-xl */
+  font-size: 1.29rem;     /* text-xl */
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  font-weight: 500;
+  background-color: #fdc526; /* custom-yellow from Tailwind config */
+  color: white;
+  border: 2px solid transparent; /* border-2 */
+  ;
+  transition: all 0.3s ease; /* Optional for smooth hover effect */
+}
+
+.custom-button:hover {
+  text-decoration: underline;
+  background-color: transparent; /* hover:bg-transparent */
+  border-color: #fdc526; /* hover:border-custom-yellow */
+  color: #fdc526; /* hover:text-custom-yellow */
+}
+
+.dark .custom-button {
+  color: white; /* dark:text-white */
+}
+
+.dark .custom-button:hover {
+  background-color: transparent; /* dark:hover:bg-transparent */
+  color: #fdc526; /* dark:hover:text-custom-yellow */
+}
