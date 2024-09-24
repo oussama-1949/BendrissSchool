@@ -6,6 +6,7 @@ import { MapPinIcon } from "@heroicons/react/24/solid";
 import { AcademicCapIcon } from "@heroicons/react/24/solid";
 import { ArrowTrendingUpIcon } from "@heroicons/react/16/solid";
 import { UserGroupIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 function Hero() {
   const { t } = useTranslation();
 
@@ -17,8 +18,8 @@ function Hero() {
         className="absolute inset-0 w-full h-full object-cover -z-10"
       />
 
-<div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.7)] to-transparent -z-0"></div>
-<div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,0,0,0.7)] to-transparent -z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.7)] to-transparent -z-10"></div>
 
       {/* =============================================Deux buttons========================================================= */}
 
@@ -39,13 +40,9 @@ function Hero() {
             {t("location")}
             <MapPinIcon className="w-6 h-6 ml-2" />
           </a>
-          <a href="#">
-            <CustomButton
-              text={t("school registration")}
-              padding="7px 10px"
-              className="hover:translate-y-1 transition-transform duration-300"
-            />
-          </a>
+          <Link href="#" to="/school-registration">
+            <CustomButton text={t("school registration")} padding="7px 10px" />
+          </Link>
         </div>
 
         {/* =============================================Trois Features========================================================= */}

@@ -4,10 +4,14 @@ import maternelle2 from "../assets/maternelle2.jpg";
 import primaire from "../assets/primaire.jpg";
 import primaire2 from "../assets/primaire2.jpg";
 import { useTranslation } from "react-i18next";
+import { Element } from 'react-scroll';
+
 function ThirdSection() {
   const { t } = useTranslation();
 
   return (
+        <Element name="thirdSection">
+
     <section className="relative  dark:bg-gray-900">
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
 
@@ -46,6 +50,7 @@ function ThirdSection() {
         </div>
       </div>
     </section>
+    </Element>
   );
 }
 

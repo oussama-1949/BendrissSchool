@@ -1,4 +1,3 @@
-/* styles.css */
 .custom-button {
   display: block;
   border-radius: 1rem; /* rounded-xl */
@@ -15,7 +14,7 @@
 
 .custom-button:hover {
   text-decoration: underline;
-  background-color: transparent; /* hover:bg-transparent */
+  background-color: #fdc4261b; /* hover:bg-transparent */
   border-color: #fdc526; /* hover:border-custom-yellow */
   color: #fdc526; /* hover:text-custom-yellow */
 }

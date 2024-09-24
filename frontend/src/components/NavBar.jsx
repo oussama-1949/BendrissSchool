@@ -1,20 +1,17 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import logo from "../assets/logo.png";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "react-router-dom";  // Import Link from react-router-dom
 import LanguageSwitcher from "./LanguageSwitcher";
-import CustomButton from "./common/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
 
   return (
-    <nav className="bg-white  dark:bg-gray-900">
-      <div className="max-w-screen-xl sm:h-24  flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
+    <nav className="bg-white dark:bg-gray-900">
+      <div className="max-w-screen-xl sm:h-24 flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-3xl text-custom-yellow font-bold whitespace-nowrap dark:text-white">
             Gsbd
           </span>
@@ -50,21 +47,24 @@ const Navbar = () => {
         >
           <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <a
-                href="#"
-                className="block py-1 px-3 font-base text-xl rounded hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-custom-yellow  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              <ScrollLink
+                to="thirdSection"
+                smooth={true}
+                duration={500}
+                className="cursor-pointer block py-1 px-3 font-base text-lg sm:text-custom-blue sm:font-semibold rounded relative hover:bg-gray-100 md:hover:bg-transparent md:hover:text-custom-yellow dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full"
               >
                 {t("about")}
-              </a>
+              </ScrollLink>
             </li>
 
             <li>
-              <a 
-                href="#"
-                className="block py-1 px-3 font-base text-xl rounded hover:bg-gray-100 md:hover:bg-transparent  md:hover:text-custom-yellow  dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-
+              {/* Use Link for routing */}
+              <Link
+                to="/school-registration"  
+                className="block py-1 px-3 font-semibold sm:text-custom-blue text-lg rounded relative hover:bg-gray-100 md:hover:bg-transparent md:hover:text-custom-yellow dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-custom-yellow after:transition-all after:duration-300 hover:after:w-full"
+              >
                 {t("school registration")}
-              </a>
+              </Link>
             </li>
 
             <li>

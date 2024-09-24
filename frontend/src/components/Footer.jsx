@@ -1,4 +1,4 @@
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useTranslation } from "react-i18next";
 
 function Footer() {
@@ -43,9 +43,9 @@ function Footer() {
               className="inline-flex  items-center sm:text-custom-blue sm:bg-blue justify-center sm:font-semibold sm:bg-white sm:px-4 sm:py-1 text-base text-center text-white rounded-2xl hover:bg-white focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900 hover:text-custom-blue transition-transform duration-300 relative group"
             >
               Contact
-              <span className="ml-2 inline-flex items-center text-custom-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="ml-2 inline-flex items-center text-custom-blue   duration-300">
               
-                <ChevronRightIcon className="w-5 h-5 transform transition-transform duration-300  group-hover:translate-x-1 group-hover:sm:translate-x-2" />
+                <ArrowRightIcon className="w-5 h-5 transform transition-transform duration-300 text-custom-blue" />
                 
               </span>
             </a>
